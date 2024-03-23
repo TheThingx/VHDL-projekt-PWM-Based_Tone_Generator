@@ -1,4 +1,5 @@
 # VHDL-projekt-xx
 
-haloo
+halo
 
+# sample-code
