@@ -1,0 +1,50 @@
+za $ je kód, který se dává do git bash. Zbytek je komentář.
+
+Naklonuji Repozitář:
+https://github.com/TheThingx/VHDL-projekt-xx.git
+
+otevřu složku kde chci naklonovat repozitář, zapnu Git Bash:
+
+REPOSITORY je myšlený repozitář hhtps://github.com/xxx
+$ git clone REPOSITORY
+
+Konfigurace git:
+
+UserName:
+$ git config --global user.name "github_username"
+ověřím:
+$ git config --global user.name
+Email
+$ git config --global user.email "gitHub_email"
+ověřím:
+$ git config --global user.email
+
+
+Commit do repozitáře: Nahraji změny v PC do repozitáře
+jdu do složky kterou chci komitnout -> zapnu git Bash
+
+. pro přidání všeho v souboru, proto to dělám ve složce ve které chci změnit repozitář.
+Přidá to soubory na přípravu na commit.
+$ git add .
+
+Zpráva k komit, stačí napsat jméno a jednoduše popsat změnu.
+$ git commit -m "zpráva"
+
+Pushne modifikovaný soubor do repozitáře.
+$ git push -u origin main
+
+Při prvním push vás to vyzve k přihlášení k Github.
+
+Kdyby nastal problém, může před push pomoct:
+
+zadává branch do které chci commitnout, pravděpodobně není potřeba zadávat, neboť je jedna Branch.
+$ git branch -M main
+
+Zadává origin repozitáře, pokud je naklonovaný není potřeba zadávat.
+$ git remote add origin REPOSITORY
+
+Pull z repozitáře:
+Jdu do zdrojové složky:
+
+Nahraje změny v repozitáři do PC.
+git pull --no-commit
