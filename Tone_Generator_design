@@ -1,0 +1,68 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Tone_Generator is
+    Port (
+        clk : in STD_LOGIC;
+        rst : in STD_LOGIC;
+        pwm_out : out STD_LOGIC;
+        tone_freq : in STD_LOGIC_VECTOR (4 downto 0)
+    );
+end Tone_Generator;
+
+architecture Behavioral of Tone_Generator is
+    signal counter : INTEGER := 0;
+    signal threshold : INTEGER := 0;
+    signal decoded_freq : INTEGER := 0; -- Signal added to hold the decoded frequency
+    constant Do_freq: INTEGER := 262;
+    constant Re_freq: INTEGER := 294;
+    constant Mi_freq: INTEGER := 330;
+    constant Fa_freq: INTEGER := 349;
+    constant Sol_freq: INTEGER := 392;
+    constant La_freq: INTEGER := 440;
+    constant Si_freq: INTEGER := 494;
+begin
+    process(clk, rst)
+    begin
+        if rst = '1' then
+            counter <= 0;
+            threshold <= 0;
+            pwm_out <= '0';
+        elsif rising_edge(clk) then
+            counter <= counter + 1;
+            if counter >= (100_000_000 / decoded_freq) then 
+                counter <= 0;
+                threshold <= (100_000_000 / (2 * decoded_freq));
+            end if;
+            if counter < threshold then
+                pwm_out <= '1';
+            else
+                pwm_out <= '0';
+            end if;
+        end if;
+    end process;
+    
+    freq_decoder: process (tone_freq)
+    begin 
+        case tone_freq is
+            when "00000" =>     
+                decoded_freq <= Do_freq;
+            when "00001" =>     
+                decoded_freq <= Re_freq;
+            when "00010" =>     
+                decoded_freq <= Mi_freq;
+            when "00011" =>     
+                decoded_freq <= Fa_freq;
+            when "00100" =>     
+                decoded_freq <= Sol_freq;
+            when "00101" =>     
+                decoded_freq <= La_freq;
+            when "00110" =>     
+                decoded_freq <= Si_freq;    
+            when others => 
+                decoded_freq <= 0; -- Assign zero (silence) for other values
+        end case;
+    end process;
+end Behavioral;
