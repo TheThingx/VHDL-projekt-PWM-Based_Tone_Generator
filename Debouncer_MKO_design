@@ -61,8 +61,9 @@ begin
                         if BTNC = '0' then
                             debounce_counter <= debounce_counter + 1;
                             -- if debounce_counter = debounce_counter-1 change to RELEASED;
-                            if debounce_counter = debounce_counter-1 then
+                            if debounce_counter = debounce_counter then
                                 state <= RELEASED;
+                            else 
                             end if;
                         -- else clear counter and change to PRESSED;
                         else
@@ -79,7 +80,7 @@ begin
 
 
 -- Set clean signal value = 1 when states PRESSED or PRE_RELEASED
-    clean_temp <= '1' when state = PRESSED or state = PRE_RELEASED else '0';
+clean_temp <= '1' when state = RELEASED or state = PRE_RELEASED else '0';
     
 -- Assign output debounced signal
 --clean <= clean_temp;
