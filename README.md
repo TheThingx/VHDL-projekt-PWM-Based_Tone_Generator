@@ -17,7 +17,7 @@
 
 
 
-![nexys.png](images/nexys.png)
+![nexys.png](pictures/nexys.png)
 
 #### Aktivní prvky na desce:
 - BTNC 
