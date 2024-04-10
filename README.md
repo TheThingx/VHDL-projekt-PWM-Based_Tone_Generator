@@ -9,7 +9,7 @@
 ## Theoretical description and explanation
 
 
-
+![schema.png](pictures/schema.png)
 
 
 
