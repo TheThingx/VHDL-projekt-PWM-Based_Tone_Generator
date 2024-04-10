@@ -19,7 +19,7 @@
 
 ![nexys.png](images/nexys.png)
 
-#Aktivní prvky na desce:
+# Aktivní prvky na desce:
 - BTNC 
 
 Tlačitko BTNC funguje jako zapináč posílaní signálu do reproduktoru a na schematu má oynačení START.
