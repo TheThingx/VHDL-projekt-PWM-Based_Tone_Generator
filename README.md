@@ -1,4 +1,4 @@
-# VHDL project - Morse Code Transmitter and Receiver
+# VHDL project - PWM-Based Tone Generator
 
 ### Team members
 
@@ -20,7 +20,7 @@
 ![nexys.png](images/nexys.png)
 
 #### Aktivní prvky na desce:
-+ BTNC 
+- BTNC 
 
 Tlačitko BTNC funguje jako zapináč posílaní signálu do reproduktoru a na schematu má oynačení START.
 Podržením tlačitka BTNC kontrolujeme delku zvučení signálu když "delková "tlačitka jsou v nůle. 
