@@ -13,14 +13,27 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity bin2seg is
+entity display is
     Port ( clear : in STD_LOGIC;
-           bin : in STD_LOGIC_VECTOR (3 downto 0);
-           seg : out STD_LOGIC_VECTOR (6 downto 0));
-end bin2seg;
+            note : in STD_LOGIC_VECTOR (3 downto 0);  
+            freq : in STD_LOGIC_VECTOR (6 downto 0);  
+            seg : out STD_LOGIC_VECTOR (6 downto 0));  
+end display;
 
-architecture Behavioral of bin2seg is
+architecture Behavioral of display is
+    
+type note_freq_meaning_array is array (natural range <>) of std_logic_vector(6 downto 0);
+    constant note : note_freq_meaning_array := (
+        "00000",  -- do 
+        "00001",  -- re
+        "00010",  -- mi
+        "00011",   -- fa
+        "00100", -- sol
+        "00101", -- la
+        "00110" -- si
+    );
 
+    
 begin
 
 p_7seg_decoder : process (bin, clear) is
@@ -31,42 +44,24 @@ begin
   else
 
     case bin is
-      when x"0" =>     -- x"0" means "0000" in hexadec.
-        seg <= "0000001";
-      when x"1" =>
-        seg <= "1001111";
-      when x"2" =>
-        seg <= "0010010";
-      when x"3" =>
-        seg <= "0000110";
-      when x"4" =>
-        seg <= "1001100";
-      when x"5" =>
-        seg <= "0100100";
-      when x"6" =>
-        seg <= "0100000";
-
-   
-
-      when x"7" =>
-        seg <= "0001111";
-      when x"8" =>
-        seg <= "0000000";
-      when x"9" =>
-        seg <= "0000100";
-      when x"a" =>
+      
+      when "00000" => --do
         seg <= "0001000";
-      when x"b" =>
-        seg <= "1100000";
-      when x"c" =>
+      when "00001" => -- re
         seg <= "0110001";
-      when x"d" =>
+      when "00010" => -- mi
         seg <= "1000010";
-
-      when x"e" =>
+      when "00011" => -- fa
         seg <= "0110000";
+      when "00100" => -- sol
+                seg <= "0111000";    
+      when "00101" => -- la
+                seg <= "0100001";    
+      when "00110" => -- si
+                seg <= "1101000";   
       when others =>
-        seg <= "0111000";
+        seg <= "0000000";
+                                  
     end case;
 
   end if;    
