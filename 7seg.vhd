@@ -16,14 +16,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity display is
     Port ( clear : in STD_LOGIC;
             note : in STD_LOGIC_VECTOR (3 downto 0);  
-            freq : in STD_LOGIC_VECTOR (6 downto 0);  
             seg : out STD_LOGIC_VECTOR (6 downto 0));  
 end display;
 
 architecture Behavioral of display is
     
-type note_freq_meaning_array is array (natural range <>) of std_logic_vector(6 downto 0);
-    constant note : note_freq_meaning_array := (
+type note_meaning_array is array (natural range <>) of std_logic_vector(6 downto 0);
+    constant note : note_meaning_array := (
         "00000",  -- do 
         "00001",  -- re
         "00010",  -- mi
