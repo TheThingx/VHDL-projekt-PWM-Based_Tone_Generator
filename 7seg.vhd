@@ -45,17 +45,17 @@ begin
     case bin is
       
       when "00000" => --do
-        seg <= "0001000";
+        seg <= "1110010";
       when "00001" => -- re
-        seg <= "0110001";
-      when "00010" => -- mi
         seg <= "1000010";
-      when "00011" => -- fa
+      when "00010" => -- mi
         seg <= "0110000";
+      when "00011" => -- fa
+        seg <= "0111000";
       when "00100" => -- sol
-                seg <= "0111000";    
-      when "00101" => -- la
                 seg <= "0100001";    
+      when "00101" => -- la
+                seg <= "0000010";    
       when "00110" => -- si
                 seg <= "1101000";   
       when others =>
