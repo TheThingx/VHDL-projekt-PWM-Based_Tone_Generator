@@ -35,7 +35,7 @@ type note_meaning_array is array (natural range <>) of std_logic_vector(6 downto
     
 begin
 
-p_7seg_decoder : process (bin, clear) is
+p_7seg_decoder : process (note, clear) is
 begin
 
   if (clear = '1') then
