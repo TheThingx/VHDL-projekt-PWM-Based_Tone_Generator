@@ -1,4 +1,0 @@
-Port (      CLK100MHZ : in STD_LOGIC;
-            BTNC : in STD_LOGIC;
-            SW: in STD_LOGIC_vector(7 downto 0);
-            AUD_PWM : out STD_LOGIC);
