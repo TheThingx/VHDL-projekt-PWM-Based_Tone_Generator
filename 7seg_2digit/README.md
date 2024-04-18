@@ -11,6 +11,6 @@ seg_out_2(6:0) - signál pro zobrazení příslušné oktávy na druhý displej 
 
 2. Mux je modul, který zobrazuje na displejích příslušná data.
 Uvnitř modulu je counter, který každou 1 ms přepíná výstup to_7seg na příslušné hodnoty ze vstupu note_in a oktave_in.
-Zároveň se přepíná výstup to_anod_0, který určuje na jaké anodě v daný okamžik má být stav High.  
+Zároveň se přepíná výstup to_anod_0, který určuje na jaké anodě v daný okamžik má být stav High. 
 
 
