@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../PWM_GEN.srcs/sources_1/new/Debounce.vhd" \
+"../../../../PWM_GEN.srcs/sources_1/new/Debouncer_Counter.vhd" \
+"../../../../PWM_GEN.srcs/sim_1/new/tb_PWM_Gen.v" \
+
+# Do not sort compile order
+nosort
