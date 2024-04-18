@@ -14,5 +14,6 @@ seg_out_2(6:0) - signál pro zobrazení příslušné oktávy na druhý displej 
 Uvnitř modulu je counter, který každou 1 ms přepíná výstup to_7seg na příslušné hodnoty ze vstupu note_in a oktave_in.
 Zároveň se přepíná výstup to_anod_0, který určuje na jaké anodě v daný okamžik má být stav High. 
 
-![Screen Shot 2024-04-18 at 14 05 38](https://github.com/TheThingx/VHDL-projekt-PWM-Based_Tone_Generator/assets/56256388/847064c7-a91c-4121-8c58-baa9b5bee514)
+![Screen Shot 2024-04-18 at 14 05 38](https://github.com/TheThingx/VHDL-projekt-PWM-Based_Tone_Generator/assets/56256388/74d5a49d-de1b-4f2f-902a-8939e400a39a)
+
 
