@@ -9,7 +9,7 @@
 ## Theoretical description and explanation
 
 
-![schema.png](pictures/schema.png)
+![schema.png](Images/schema.png)
 
 
 
@@ -17,7 +17,7 @@
 Použita deska je NexysA7-50T. Audio výstup jack (J8) je připojen k reproduktoru, použivá filtr Sallen-Key Butterworth Low-pass 4th Order dovolujicí momo audio výstup. Digitalní vstup je PWM-signál a je vědený logickou 0 nebo 1. Nizkofrekvenční filtr na vstupu chova se jako rekonstrukční filtr převodu PWM digitalního signálu na analogové napětí na vystupu audio jacku.
 
 
-![nexys.png](pictures/nexys.png)
+![nexys.png](Images/nexys.png)
 
 #### Aktivní prvky na desce:
 - BTNC 
