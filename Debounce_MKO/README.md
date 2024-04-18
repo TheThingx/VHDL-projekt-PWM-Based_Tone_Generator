@@ -17,4 +17,4 @@ Počet period CLK100MHz = 1 sekunda/10ns = 100_000_000 period.
 
 ![Screen Shot 2024-04-18 at 15 47 27](https://github.com/arturshiva/pwm_VHDL/assets/56256388/0ba1cf70-b3d4-495b-92f7-95fdcd540fd4)
 
-![image](https://github.com/TheThingx/VHDL-projekt-PWM-Based_Tone_Generator/assets/56256388/99c3ecb5-22a5-4a7b-befa-3de27e455ad7)
+
