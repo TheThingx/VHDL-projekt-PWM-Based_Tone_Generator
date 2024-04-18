@@ -1,7 +1,8 @@
 # 7seg_2digit
 
 Celkový modul pro zobrazení noty(tónu) a oktávy na dva různé displeje je rozdělen na dvě části.
-[schematic.pdf](https://github.com/TheThingx/VHDL-projekt-PWM-Based_Tone_Generator/files/15024471/schematic.pdf)
+![schematic](https://github.com/TheThingx/VHDL-projekt-PWM-Based_Tone_Generator/assets/56256388/4ba61591-c801-479b-9980-7d7fd30eee4c)
+
 
 1. 
 Divider je modul, který na vstup note přijímá binární hodnoty z přepínačů SW(4:0). Výstupem jsou dva signály:
