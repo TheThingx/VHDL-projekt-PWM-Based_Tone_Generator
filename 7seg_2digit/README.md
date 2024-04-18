@@ -16,4 +16,5 @@ Zároveň se přepíná výstup to_anod_0, který určuje na jaké anodě v dan�
 
 ![Screen Shot 2024-04-18 at 14 05 38](https://github.com/TheThingx/VHDL-projekt-PWM-Based_Tone_Generator/assets/56256388/74d5a49d-de1b-4f2f-902a-8939e400a39a)
 
+![Screen Shot 2024-04-18 at 15 28 20](https://github.com/TheThingx/VHDL-projekt-PWM-Based_Tone_Generator/assets/56256388/2a0012ee-7905-42dc-808b-d63bebdb4b02)
 
