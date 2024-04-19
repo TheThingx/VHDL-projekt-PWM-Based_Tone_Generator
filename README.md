@@ -44,10 +44,15 @@ Každý switch je zodpovědní za určitou frekvenci:
 
 ## Software description
 
+Debouncer 2 - amplituda signalu
+Debouncer 1 - delka trvani signalu 
+MKO - Monostabilni klopny obvod, generator ridici zmacknutim prostredniho tlacitka jak zpousti ten PWM signal. 
+Tone generator - signal se deli na 1024 casti a stava z toho PWM signal. Vystup jde do monitoru.
+Switche měni ton.
 
 ### Component(s) simulation
 
-* 
+* Se zvysenim frekvenci je lepsi integrace => sinusovka je vice plynula. Rozmitani hlasitosti. 
 
 
 
