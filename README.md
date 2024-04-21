@@ -54,6 +54,7 @@ Display je naprogramovan pomoci bloku 7seg. Vybrany ton se zobrazi na displaji c
 * MKO - Monostabilni klopny obvod.
 
  Modul Debounce_MKO implementuje debounce mechanismus pro tlačítko BTNC a také nastavuje dobu trvaní výstupu z generátoru tónu ve stavu High(enable výstup pro generátor En_PWM), tj jak dlouho vybraný tón zní. Modul celkem provádí tři procesy:
+ 
     1. Debounce mechanismus.
 Debounce mechanismus je implementován pomocí stavového automatu, který reaguje na změny vstupního signálu BTNC a provádí odpovídající přechody mezi stavy s použitím časovače.
 
