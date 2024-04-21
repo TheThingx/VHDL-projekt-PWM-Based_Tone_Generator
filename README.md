@@ -3,7 +3,7 @@
 ### Team members
 
 * Nizamutdinov Artur - debouncer_MKO
-* Bukva Tomáš 
+* Bukva Tomáš - PWM_gen
 * Aujeský Filip - debouncer_counter
 * Shishkova Viktoriia 
 
