@@ -59,7 +59,7 @@ Debounce mechanismus je implementován pomocí stavového automatu, který reagu
 
 ![CLK_period.png](Images/CLK_period.png)
   
-    2. Proces pro řízení výstupního signálu.
+   2. Proces pro řízení výstupního signálu. Tlačítko BTNC pracuje ve dvou režimech:
 Tlačítko BTNC pracuje ve dvou režimech: 
 - pokud na vstupu PWM_Per, který určuje dobu trvaní signálu je 0, tlačítko BTNC funguje jako test-tlačítko, to znamená, že signál zní pouze dokud je tlačítko zmačknuto
 - pokud na vstupu PWM_Per zvýšíme hodnotu o 1, tlačítko BTNC začíná fungovat jako start-tlačítko a signál na výstupu zní po dobu 1 vteřiny apod.
