@@ -55,7 +55,7 @@ Display je naprogramovan pomoci bloku 7seg. Vybrany ton se zobrazi na displaji c
 
  Modul Debounce_MKO implementuje debounce mechanismus pro tlačítko BTNC a také nastavuje dobu trvaní výstupu z generátoru tónu ve stavu High(enable výstup pro generátor En_PWM), tj jak dlouho vybraný tón zní. Modul celkem provádí tři procesy:
  
-    1. Debounce mechanismus.
+   1. Debounce mechanismus.
 Debounce mechanismus je implementován pomocí stavového automatu, který reaguje na změny vstupního signálu BTNC a provádí odpovídající přechody mezi stavy s použitím časovače.
 
 ![CLK_period.png](Images/CLK_period.png)
@@ -65,7 +65,7 @@ Tlačítko BTNC pracuje ve dvou režimech:
 - pokud na vstupu PWM_Per, který určuje dobu trvaní signálu je 0, tlačítko BTNC funguje jako test-tlačítko, to znamená, že signál zní pouze dokud je tlačítko zmačknuto
 - pokud na vstupu PWM_Per zvýšíme hodnotu o 1, tlačítko BTNC začíná fungovat jako start-tlačítko a signál na výstupu zní po dobu 1 vteřiny apod.
 
-    3. Proces pro dekódování délky trvaní PWM.
+  3. Proces pro dekódování délky trvaní PWM.
 Vstup PWM_Per sleduje stisk tlačítek BTNL a BTNR a nastavuje délku trvání signálu En_PWM podle předem definovaných konstant (1s, 2s, 3s, 4s).
 Počet period CLK100MHz = 1 sekunda/10ns = 100_000_000 period.
 
