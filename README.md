@@ -5,13 +5,17 @@
 * Nizamutdinov Artur 
 * Bukva Tomáš
 * Aujeský Filip
-* Viktoriia Shishkova
+* Shishkova Viktoriia 
 
-## Theoretical description and explanation
+## Theoreticky uvod a cil projektu
 
+Cilem projektu je vytvareni tonoveho generatoru a testovani jeho funkcnosti. Generator vyuziva princip Pulzně šířkove modulace, prevadejici sinusovou vlnu do tvaru navzorkovaneho signalu obdelnikoveho tvaru. Negativni pulz odpovida nizsi urovni (Low-level 0), pozitivni pulz odpovida vyssi urovni (High-level 1). 
 
-![scheme.png](Images/scheme.png)
+![obd.png](Images/obd.png)
 
+Nize je predstavena plna blokova schema PWM generatoru. 
+
+![schematic.png](Images/schematic.png)
 
 
 ## Hardware description of demo application
@@ -23,7 +27,7 @@ Použita deska je NexysA7-50T. Audio výstup jack (J8) je připojen k reprodukto
 #### Aktivní prvky na desce:
 - BTNC 
 
-Tlačitko BTNC funguje jako zapináč posílaní signálu do reproduktoru a na schematu má oynačení START.
+Tlačitko BTNC funguje jako zapináč posílaní signálu do reproduktoru a na schematu má označení START.
 Podržením tlačitka BTNC kontrolujeme delku zvučení signálu když "delková "tlačitka jsou v nůle. 
 Po nastavéní delky signálu pomocí tlačitek BTNL a BTNR pak zmačknutím spustíme signál a ten bude znět tu dobu, která byla nastavena. 
 
@@ -33,17 +37,15 @@ Po nastavéní delky signálu pomocí tlačitek BTNL a BTNR pak zmačknutím spu
 
 - SWITCHES
 
-Switche mají na stárosti prepinání mezi noty (frekvenci).
-Každý switch je zodpovědní za určitou frekvenci:
-  - Do = 262 Hz => SW0 (J15)
-  - Re = 294 Hz => SW1 (L16)
-  - Mi = 330 Hz => SW2 (M13)
-  - Fa = 349 Hz => SW3 (R15)
-  - Sol = 392 Hz => SW4 (R17)
-  - La = 440 Hz => SW5 (T18)
-  - Si = 494 Hz => SW6 (U18)
+Switches mají na stárosti prepinání mezi noty (frekvenci). Binarni kombinaci switchu je moznost nastaveni jednoho z 32 tonu. 
+Display je naprogramovan pomoci bloku 7seg. Vybrany ton se zobrazi na displaji cislem a pismenem. Aktivni je indikace pomoci LEDek.
 
-## Software description
+
+## Softwarove bloky
+
+* Debouncer counter 1/2.
+
+  Bloky jsou odlisne
 
 Debouncer 2 - amplituda signalu
 Debouncer 1 - delka trvani signalu 
