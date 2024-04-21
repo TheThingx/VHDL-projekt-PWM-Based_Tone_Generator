@@ -2,9 +2,10 @@
 
 ### Team members
 
-* 
-* 
-* 
+* Nizamutdinov Artur 
+* Bukva Tomáš
+* Aujeský Filip
+* Viktoriia Shishkova
 
 ## Theoretical description and explanation
 
