@@ -11,11 +11,10 @@
 
 Cílem projektu je vytvářeni tónového generátoru a testovaní jeho funkčnosti. Generátor využívá princip Pulzně šířkové modulace, převádějící sinusovou vlnu do tvaru nevzorkovaného signálu obdélníkového tvaru. Negativní pulz odpovídá nižší úroví (Low-level 0), pozitivní pulz odpovídá vyšší úrovní (High-level 1).
  
-
 ![obd.png](Images/obd.png)
 
-Nize je predstavena plna blokova schema PWM generatoru. 
-
+Níže je představena plna bloková schéma PWM generátoru.
+ 
 ![schematic.png](Images/schematic.png)
 
 
