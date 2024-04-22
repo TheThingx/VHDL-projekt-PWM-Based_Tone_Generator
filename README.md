@@ -110,8 +110,6 @@ Instrukce pro použití tónového generátoru na desce NexysA7-50T:
 -	Stiskněte tlačítko BTNC pro spuštění generátoru tónů a znění zvolené noty
 -	Pomocí tlačítek BTNU a BTND se upravuje hlasitost tónu.
 
-![image](https://github.com/TheThingx/VHDL-projekt-PWM-Based_Tone_Generator/assets/56256388/0217f066-26c7-4df9-9251-0edd5d598297)
-
 https://youtu.be/3LdDS_pSHGM?si=KPGCeBt3VCl12Sti
 
 ## References
