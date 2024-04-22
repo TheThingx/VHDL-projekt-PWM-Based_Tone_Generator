@@ -87,5 +87,5 @@ https://youtu.be/3LdDS_pSHGM?si=KPGCeBt3VCl12Sti
 ## References
 
 1. https://digilent.com/shop/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/
-2. 
+2. https://github.com/tomas-fryza/vhdl-course/tree/master?tab=readme-ov-file
 3. 
