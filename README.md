@@ -7,7 +7,7 @@
 * Aujeský Filip - debouncer_counter
 * Shishkova Viktoriia 
 
-## Theoreticky uvod a cil projektu
+## Teoretický úvod a cíl projektu
 
 Cílem projektu je vytvářeni tónového generátoru a testovaní jeho funkčnosti. Generátor využívá princip Pulzně šířkové modulace, převádějící sinusovou vlnu do tvaru nevzorkovaného signálu obdélníkového tvaru. Negativní pulz odpovídá nižší úroví (Low-level 0), pozitivní pulz odpovídá vyšší úrovní (High-level 1).
  
