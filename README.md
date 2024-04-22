@@ -9,7 +9,8 @@
 
 ## Theoreticky uvod a cil projektu
 
-Cilem projektu je vytvareni tonoveho generatoru a testovani jeho funkcnosti. Generator vyuziva princip Pulzně šířkove modulace, prevadejici sinusovou vlnu do tvaru navzorkovaneho signalu obdelnikoveho tvaru. Negativni pulz odpovida nizsi urovni (Low-level 0), pozitivni pulz odpovida vyssi urovni (High-level 1). 
+Cílem projektu je vytvářeni tónového generátoru a testovaní jeho funkčnosti. Generátor využívá princip Pulzně šířkové modulace, převádějící sinusovou vlnu do tvaru nevzorkovaného signálu obdélníkového tvaru. Negativní pulz odpovídá nižší úroví (Low-level 0), pozitivní pulz odpovídá vyšší úrovní (High-level 1).
+ 
 
 ![obd.png](Images/obd.png)
 
