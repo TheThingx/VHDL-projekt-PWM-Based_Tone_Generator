@@ -9,17 +9,17 @@
 
 ## Teoretický úvod a cíl projektu
 
-Cílem projektu je vytvářeni tónového generátoru a testovaní jeho funkčnosti. Generátor využívá princip Pulzně šířkové modulace, převádějící sinusovou vlnu do tvaru nevzorkovaného signálu obdélníkového tvaru. Negativní pulz odpovídá nižší úroví (Low-level 0), pozitivní pulz odpovídá vyšší úrovní (High-level 1).
+Cílem projektu je vytváření tónového generátoru a testovaní jeho funkčnosti. Generátor využívá princip Pulzně šířkové modulace, převádějící sinusovou vlnu do tvaru nevzorkovaného signálu obdélníkového tvaru. Negativní pulz odpovídá nižší úroví (Low-level 0), pozitivní pulz odpovídá vyšší úrovní (High-level 1).
  
 ![obd.png](Images/obd.png)
 
-Níže je představena plna bloková schéma PWM generátoru.
+Níže je blokové schéma PWM generátoru.
  
 ![schematic.png](Images/schematic.png)
 
 
 ## Hardware description of demo application
-Použita deska je NexysA7-50T. Audio výstup jack (J8) je připojen k reproduktoru, použivá filtr Sallen-Key Butterworth Low-pass 4th Order dovolujicí mono audio výstup. Digitalní vstup je PWM-signál a je vědený logickou 0 nebo 1. Nizkofrekvenční filtr se na vstupu chová jako rekonstrukční filtr převodu PWM digitalního signálu na analogové napětí na vystupu audio jacku.
+Použitá deska je NexysA7-50T. Audio výstup jack (J8) je připojen k reproduktoru, použivá filtr Sallen-Key Butterworth Low-pass 4th Order dovolujicí mono audio výstup. Digitalní vstup je PWM-signál a je vedený logickou 0 nebo 1. Nízkofrekvenční filtr se na vstupu chová jako rekonstrukční filtr převodu PWM digitalního signálu na analogové napětí na vystupu audio jacku.
 
 
 ![nexys.png](Images/nexys.png)
@@ -27,31 +27,31 @@ Použita deska je NexysA7-50T. Audio výstup jack (J8) je připojen k reprodukto
 #### Aktivní prvky na desce:
 - BTNC 
 
-Tlačitko BTNC funguje jako zapináč posílaní signálu do reproduktoru a na schematu má označení START.
-Podržením tlačitka BTNC kontrolujeme delku zvučení signálu když "delková "tlačitka jsou v nůle. 
-Po nastavéní delky signálu pomocí tlačitek BTNL a BTNR pak zmačknutím spustíme signál a ten bude znět tu dobu, která byla nastavena. 
+Tlačitko BTNC funguje jako spínač signálu do reproduktoru a na schématu má označení START.
+Podržením tlačitka BTNC kontrolujeme delku zvučení signálu když "délková "tlačítka jsou v nule. 
+Po nastavéní délky signálu pomocí tlačítek BTNL a BTNR pak zmačknutím spustíme signál a ten bude znět tu dobu, která byla nastavena. 
 
 - BTNL/BTNR
 
-"Tonová" tlačitka BTNL a BTNR fungují tak, že pomocí ně nastavíme delku znění tonu. BTNL ponižuje dobu trvaní tonu o 1 sekundu, BTNR naopak zvetšuje dobu trvaní o 1 sekundu. 
+"Tónová" tlačitka BTNL a BTNR fungují tak, že pomocí nich nastavíme delku znění tónu. BTNL snižuje dobu trvaní tónu o 1 sekundu, BTNR naopak zvětšuje dobu trvaní o 1 sekundu. 
 
 - SWITCHES
 
-Switches mají na stárosti prepinání mezi noty (frekvenci). Binarni kombinaci switchu je moznost nastaveni jednoho z 32 tonu. 
-Display je naprogramovan pomoci bloku 7seg. Vybrany ton se zobrazi na displaji cislem a pismenem. Aktivni je indikace pomoci LEDek.
+Switches mají na starosti přepínání mezi noty (frekvenci). Binarní kombinací switchů je možnost nastavení jednoho z 32 tónů. 
+Display je naprogramován pomocí bloku 7seg. Vybraný tón se zobrazí na displaji číslem a písmenem. Aktivni je indikace pomoci LEDek.
 
 
 ## Softwarove bloky
 
 * Debouncer counter 1/2.
 
-  Bloky jsou shodne ve svem postaveni. Oba bloky maji tri vstupnich signaly (2x BTN- a CLK100 MHz). Jsou rizene klokovacim signalem. Vystup je jedinym signalem Counter_out[3;0]. 
-    - deb_counter1 nastavuje dellu trvani dignalu. Je rizeny tlacitkami BTNL, BTNR. Vystupni signal postupuje do bloku MKO. 
-    - deb_counter2 nastavuje amplitudu vystupniho signalu. Je rizeny tlacitkami BTND a BTNU. Vystupni signal nasleduje primo do bloku tonoveho generatoru gen. 
+  Bloky jsou shodné ve svém postavení. Oba bloky mají tři vstupní signály (2x BTN- a CLK100 MHz). Jsou řízené clk signálem. Vystup je jedínym signálem Counter_out[3;0]. 
+    - deb_counter1 nastavuje délku trvaní signálu. Je řízený tlačítkami BTNL, BTNR. Výstupní signál postupuje do bloku MKO. 
+    - deb_counter2 nastavuje amplitudu výstupního signálu. Je řízený tlačítkami BTND a BTNU. Výstupní signál následuje přímo do bloku tónového generátoru gen. 
 
 ![Debouncer_counter_sim.png](Images/Debouncer_counter_sim.png)
  
-* MKO - Monostabilni klopny obvod.
+* MKO - Monostabilní klopný obvod.
 
  Modul Debounce_MKO implementuje debounce mechanismus pro tlačítko BTNC a také nastavuje dobu trvaní výstupu z generátoru tónu ve stavu High(enable výstup pro generátor En_PWM), tj jak dlouho vybraný tón zní. Modul celkem provádí tři procesy:
  
