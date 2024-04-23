@@ -103,7 +103,7 @@ Zároveň se přepíná výstup to_anod_0, který určuje na jaké anodě v dan�
 
 
 ## Instructions
-Instrukce pro použití tónového generátoru na desce NexysA7-50T:
+Návod k použití tónového generátoru na desce NexysA7-50T:
 
 -	Pomocí přepínačů SW nastavte požadovanou notu. Na displeje se zobrazí tón. 
 -	Pomocí tlačítek BTNL a BTNR nastavte délku zvuku.
